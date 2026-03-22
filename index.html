@@ -81,31 +81,31 @@ const C = { bg:"#58595B", bgCard:"#6F7173", bgInput:"#7A7C7E", yellow:"#FFE100",
 const FONT = "'Alef', Arial, sans-serif";
 
 const STEPS_CONFIG = [
-  { num:1, icon:"☀️", title:"חשיפה",      subtitle:"כיול הנוכחות והגדרת האתגר",      tagLabel:"מסגור האתגר",  tagBg:C.yellow,   tagColor:C.dark,  instruction:"בחר תמונה שמייצגת את האתגר הפיקודי שלך – זו שמאירה או מאפילה על הפריים הפיקודי שלך כרגע.",   nextLabel:"המשך לשלב 2" },
-  { num:2, icon:"🎯", title:"עומק שדה",   subtitle:"דיוק הפוקוס וסדרי העדיפויות",    tagLabel:"מיקוד רלוונטי",tagBg:C.blue,     tagColor:C.dark,  instruction:"בחר דימוי שמסמל את הפוקוס הפיקודי שהיית רוצה לשים עליו הדגש.",                               nextLabel:"המשך לשלב 3" },
-  { num:3, icon:"🌑", title:"צללים",      subtitle:"זיהוי הדינמיקות הסמויות בצוות", tagLabel:"חשיפת חסמים", tagBg:"#6F7173",  tagColor:C.white, instruction:"כל צוות מחזיק 'צללים' – דינמיקות, חששות ומתחים שלא מדברים עליהם בגלוי. בחר תמונה שמייצגת חסמים.", nextLabel:"המשך לשלב 4" },
-  { num:4, icon:"📐", title:"קומפוזיציה", subtitle:"מעבר לפעולה קונקרטית",           tagLabel:"מעבר לפעולה", tagBg:"#A2A2A1",  tagColor:C.dark,  instruction:"בחר תמונה שמייצגת את הכיוון שאליו אתה רוצה ללכת – כדי שנוכל לבנות יחד תוכנית פעולה קונקרטית.", nextLabel:"סיים וקבל סיכום" },
+  { num:1, icon:"☀️", title:"חשיפה",      subtitle:"כיול הנוכחות והגדרת האתגר",      tagLabel:"מסגור האתגר",  tagBg:C.yellow,   tagColor:C.dark,  instruction:"בחרי תמונה שמייצגת את האתגר הפיקודי שלך – זו שמאירה או מאפילה על הפריים הפיקודי שלך כרגע.",   nextLabel:"המשך לשלב 2" },
+  { num:2, icon:"🎯", title:"עומק שדה",   subtitle:"דיוק הפוקוס וסדרי העדיפויות",    tagLabel:"מיקוד רלוונטי",tagBg:C.blue,     tagColor:C.dark,  instruction:"בחרי דימוי שמסמל את הפוקוס הפיקודי שהיית רוצה לשים עליו הדגש.",                               nextLabel:"המשך לשלב 3" },
+  { num:3, icon:"🌑", title:"צללים",      subtitle:"זיהוי הדינמיקות הסמויות בצוות", tagLabel:"חשיפת חסמים", tagBg:"#6F7173",  tagColor:C.white, instruction:"כל צוות מחזיק 'צללים' – דינמיקות, חששות ומתחים שלא מדברים עליהם בגלוי. בחרי תמונה שמייצגת חסמים.", nextLabel:"המשך לשלב 4" },
+  { num:4, icon:"📐", title:"קומפוזיציה", subtitle:"מעבר לפעולה קונקרטית",           tagLabel:"מעבר לפעולה", tagBg:"#A2A2A1",  tagColor:C.dark,  instruction:"בחרי תמונה שמייצגת את הכיוון הפיקודי שאליו את רוצה ללכת – כדי שנוכל לבנות יחד תוכנית פעולה קונקרטית.", nextLabel:"סיים וקבל סיכום" },
 ];
 
 const STEP_QUESTIONS = {
   1:[
     {key:"challenge",label:"מה האתגר הפיקודי שהתמונה הזאת מייצגת עבורך?",placeholder:"האתגר שהתמונה מייצגת...",type:"textarea"},
-    {key:"current",  label:"מה ההתמודדות הפיקודית המרכזית שאתה מתמודד איתה כעת?",placeholder:"אני מתמודד עם...",type:"textarea"},
-    {key:"skills",   label:"אילו כישורים אתה מגיס כדי להתמודד עם המצב?",subtitle:"בחר עד 3",type:"tags",
+    {key:"current",  label:"מה ההתמודדות הפיקודית המרכזית שאת מתמודדת איתה כעת?",placeholder:"אני מתמודדת עם...",type:"textarea"},
+    {key:"skills",   label:"אילו כישורים את מגייסת כדי להתמודד עם המצב?",subtitle:"בחר עד 3",type:"tags",
      options:["אסטרטגיה","תקשורת","יצירתיות","ניהול זמן","הקשבה","קבלת החלטות","בניית אמון","חדשנות","עבודת צוות","חשיבה מערכתית"],max:3},
     {key:"missing",  label:"מה חסר לך?",placeholder:"משאבים, כלים, תמיכה...",type:"textarea"},
     {key:"impact",   label:"מד השפעה – כמה האתגר הזה משפיע על הפיקוד שלך כעת?",type:"slider"},
   ],
   2:[
     {key:"focus",      label:"מה התמונה מייצגת עבורך בהקשר של הפוקוס הפיקודי שלך?",placeholder:"הפוקוס שלי הוא...",type:"textarea"},
-    {key:"firstAction",label:"מה הפעולה הראשונה שתבחר לעשות?",placeholder:"הפעולה הראשונה שאבחר...",type:"textarea"},
+    {key:"firstAction",label:"מה הפעולה הראשונה שתבחרי לעשות?",placeholder:"הפעולה הראשונה שאבחר...",type:"textarea"},
     {key:"skills",     label:"מה הכישורים שתגייס לפוקוס זה",type:"tags",
      options:["זיהוי משימות קריטיות","יצירת עוגנים","צמצום מטרות","נטרול רעשי רקע","בהירות פיקודית","מוטיבציה","ניהול משאבים","תיעדוף"]},
     {key:"pressure",   label:"מד השפעה – עד כמה זה משפיע על הפוקוס הפיקודי שלך",type:"slider"},
   ],
   3:[
     {key:"hidden", label:"מה מייצגת התמונה עבורך בהקשר של מה שנסתר מהעין?",placeholder:"זה מייצג עבורי...",type:"textarea"},
-    {key:"fear",   label:"מה הפחד הפיקודי שלך?",subtitle:"שאלה אישית – ענה בכנות",placeholder:"שאני לא...",type:"textarea"},
+    {key:"fear",   label:"מה הפחד הפיקודי שלך?",subtitle:"שאלה אישית – עני בכנות",placeholder:"שאני לא...",type:"textarea"},
     {key:"barrier",label:"מה החסם הראשי בצוות שלך?",subtitle:"דינמיקה, אדם, נושא",placeholder:"חוסר הקשבה / חוסר אמון...",type:"textarea"},
     {key:"worry",  label:"מד חשש – כמה זה מאתגר אותך?",type:"slider"},
   ],
@@ -113,8 +113,8 @@ const STEP_QUESTIONS = {
     {key:"challenge",label:"מה התמונה מייצגת עבורך בהקשר של ארגון האתגר מחדש?",subtitle:"תאר בקצרה",placeholder:"זה מייצג עבורי...",type:"textarea"},
     {key:"teamIdeal",label:"מה הרכב הצוות האידיאלי בעיניך?",placeholder:"בצוות שלי יש...",type:"textarea"},
     {key:"goal",     label:"מה המטרה שהיית רוצה להגיע אליה עם הצוות שלך?",placeholder:"אני רוצה להגיע למצב שבו...",type:"textarea"},
-    {key:"tomorrow", label:"מה הפעולה הראשונה שתעשה מחר בבוקר?",subtitle:"ספציפי וניתן לביצוע",placeholder:"מחר בבוקר אני אעשה...",type:"textarea"},
-    {key:"belief",  label:"כמה אתה מאמין שתוכל לייצר שינוי?",type:"slider"},
+    {key:"tomorrow", label:"מה הפעולה הראשונה שתעשי מחר בבוקר?",subtitle:"ספציפי וניתן לביצוע",placeholder:"מחר בבוקר אני אעשה...",type:"textarea"},
+    {key:"belief",  label:"כמה את מאמינה שתוכלי לייצר שינוי?",type:"slider"},
   ],
 };
 
@@ -769,7 +769,7 @@ function SummaryPage({allData,insights,setInsights,closingNote,setClosingNote,on
           <div style={{background:C.bgCard,borderRadius:14,padding:20,marginBottom:14}}>
             <div style={{color:C.white,fontWeight:700,fontSize:16,textAlign:"right",marginBottom:12,fontFamily:FONT}}>תובנות אישיות שלך</div>
             <textarea value={insights} onChange={e=>setInsights(e.target.value)}
-              placeholder="כתוב את התובנות והלקחים שלך מהתהליך..." rows={5}
+              placeholder="כתבי את התובנות והלקחים שלך מהתהליך..." rows={5}
               style={{width:"100%",background:C.bgInput,color:C.white,border:"none",
                 borderRadius:10,padding:"12px 14px",fontSize:14,fontFamily:FONT,
                 resize:"vertical",textAlign:"right",direction:"rtl",lineHeight:1.7}}/>
@@ -777,7 +777,7 @@ function SummaryPage({allData,insights,setInsights,closingNote,setClosingNote,on
           <div style={{background:C.bgCard,borderRadius:14,padding:20,marginBottom:28}}>
             <div style={{color:C.white,fontWeight:700,fontSize:16,textAlign:"right",marginBottom:12,fontFamily:FONT}}>הערה אישית סיום</div>
             <textarea value={closingNote} onChange={e=>setClosingNote(e.target.value)}
-              placeholder="כתוב משהו אישי שמסכם את התהליך שלך..." rows={5}
+              placeholder="כתבי משהו אישי שמסכם את התהליך שלך..." rows={5}
               style={{width:"100%",background:C.bgInput,color:C.white,border:"none",
                 borderRadius:10,padding:"12px 14px",fontSize:14,fontFamily:FONT,
                 resize:"vertical",textAlign:"right",direction:"rtl",lineHeight:1.7}}/>
@@ -849,7 +849,7 @@ function App(){
     (async()=>{
       if(window.location.search.includes("test=1")){
         const demo={
-          1:{photo:0,challenge:"האתגר המרכזי שלי הוא פיקוד על צוות גדול תחת לחץ",current:"אני מתמודד עם חוסר בהירות ביעדים",skills:["תקשורת","הקשבה"],missing:"זמן וכלים מתאימים",impact:7},
+          1:{photo:0,challenge:"האתגר המרכזי שלי הוא פיקוד על צוות גדול תחת לחץ",current:"אני מתמודדת עם חוסר בהירות ביעדים",skills:["תקשורת","הקשבה"],missing:"זמן וכלים מתאימים",impact:7},
           2:{photo:5,focus:"להיות נוכח ומחובר לצוות",firstAction:"פגישת צוות שבועית מובנית",skills:["בהירות פיקודית","מוטיבציה"],pressure:6},
           3:{photo:10,hidden:"הצוות מרגיש חוסר ביטחון",fear:"שלא אצליח לייצר שינוי אמיתי",barrier:"חוסר אמון בין חברי הצוות",worry:5},
           4:{photo:15,challenge:"ארגון מחדש של הפגישות השבועיות",teamIdeal:"צוות עצמאי שיוזם ופועל",goal:"להגיע למצב של עצמאות פיקודית",tomorrow:"שיחה אחד על אחד עם כל חבר צוות",belief:8}
