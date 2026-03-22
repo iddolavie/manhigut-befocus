@@ -173,7 +173,7 @@ async function generateSummaryCanvas(allData, insights, closingNote) {
     // Header
     if(realDraw){
       ctx.fillStyle=C.yellow; ctx.font='bold 28px Arial,sans-serif';
-      ctx.fillText('מנהיגות פועלת 🎯', W-PAD, y+28);
+      ctx.fillText('מנהיגות בפוקוס 🎯', W-PAD, y+28);
       ctx.fillStyle=C.muted; ctx.font='14px Arial,sans-serif';
       ctx.fillText('Leadership in Action – סיכום התהליך', W-PAD, y+54);
     }
@@ -293,7 +293,7 @@ async function generateSummaryCanvas(allData, insights, closingNote) {
     // Footer
     if(realDraw){
       ctx.fillStyle=C.muted; ctx.font='12px Alef,Arial,sans-serif';
-      ctx.fillText('מנהיגות פועלת © 2025',W-PAD,y+16);
+      ctx.fillText('מנהיגות בפוקוס © 2025',W-PAD,y+16);
     }
     return y+32;
   }
@@ -478,7 +478,7 @@ function QuestionBlock({q,data,setData}){
 }
 
 function Footer(){
-  return <div style={{textAlign:"center",color:C.muted,fontSize:12,fontFamily:FONT,paddingTop:20,paddingBottom:8}}>מנהיגות פועלת © 2025</div>;
+  return <div style={{textAlign:"center",color:C.muted,fontSize:12,fontFamily:FONT,paddingTop:20,paddingBottom:8}}>מנהיגות בפוקוס © 2025</div>;
 }
 
 // =====================
@@ -498,7 +498,7 @@ function HomePage({onStart}){
           <div style={{width:64,height:64,borderRadius:16,background:C.bgCard,margin:"0 auto 18px",
             display:"flex",alignItems:"center",justifyContent:"center",fontSize:30,
             boxShadow:"0 4px 16px #00000044"}}>📷</div>
-          <h1 style={{color:C.white,fontSize:36,fontWeight:700,margin:0,fontFamily:FONT}}>מנהיגות פועלת</h1>
+          <h1 style={{color:C.white,fontSize:36,fontWeight:700,margin:0,fontFamily:FONT}}>מנהיגות בפוקוס</h1>
           <div style={{color:C.muted,fontSize:13,marginTop:5,letterSpacing:"0.08em",fontFamily:FONT}}>Leadership in Action</div>
         </div>
         <div style={{textAlign:"center",marginBottom:24}}>
@@ -507,7 +507,7 @@ function HomePage({onStart}){
         </div>
         <div style={{background:C.bgCard,borderRadius:12,padding:"18px 20px",marginBottom:12,textAlign:"right"}}>
           <p style={{color:C.white,fontSize:14,lineHeight:1.9,margin:0,fontFamily:FONT}}>
-            לפניכם כלי עבודה פרקטי שנועד לעזור למנהלים לנווט בזמנים של חוסר ודאות. המטרה פשוטה: לעצור לרגע, להסתכל על המציאות דרך עיניים של צלם, ולעבור ממצב של "כיבוי שריפות" לניהול ממוקד ומודע.
+            לפניכם כלי עבודה פרקטי שנועד לעזור למפקדים לנווט בזמנים של חוסר ודאות. המטרה פשוטה: לעצור לרגע, להסתכל על המציאות דרך עיניים של צלם, ולעבור ממצב של "כיבוי שריפות" לניהול ממוקד ומודע.
           </p>
         </div>
         <div style={{background:C.bgCard,borderRadius:12,padding:"18px 20px",marginBottom:28,textAlign:"right"}}>
@@ -615,13 +615,13 @@ function SummaryPage({allData,insights,setInsights,closingNote,setClosingNote,on
     setShareModal(false);setSharing(true);
     const url=await getShortUrl();
     setSharing(false);
-    window.open("https://wa.me/?text="+encodeURIComponent("סיכום מנהיגות פועלת שלי:\n"+url),"_blank");
+    window.open("https://wa.me/?text="+encodeURIComponent("סיכום מנהיגות בפוקוס שלי:\n"+url),"_blank");
   };
   const sendEmail=async()=>{
     setShareModal(false);setSharing(true);
     const url=await getShortUrl();
     setSharing(false);
-    window.open("mailto:?subject="+encodeURIComponent("מנהיגות פועלת – סיכום")+"&body="+encodeURIComponent(url),"_blank");
+    window.open("mailto:?subject="+encodeURIComponent("מנהיגות בפוקוס – סיכום")+"&body="+encodeURIComponent(url),"_blank");
   };
 
   const openShare=()=>setShareModal(true);
@@ -745,7 +745,7 @@ function SummaryPage({allData,insights,setInsights,closingNote,setClosingNote,on
         <div style={{textAlign:"center",marginBottom:36}}>
           <div style={{fontSize:50,marginBottom:10}}>🎯</div>
           <h1 style={{color:C.yellow,fontSize:28,fontWeight:700,margin:"0 0 6px",fontFamily:FONT}}>סיכום התהליך שלך</h1>
-          <p style={{color:C.muted,margin:0,fontFamily:FONT}}>מנהיגות פועלת – Leadership in Action</p>
+          <p style={{color:C.muted,margin:0,fontFamily:FONT}}>מנהיגות בפוקוס</p>
         </div>
 
         <div id="print-area">
@@ -825,7 +825,7 @@ function SummaryPage({allData,insights,setInsights,closingNote,setClosingNote,on
             style={{display:"block",background:C.yellow,borderRadius:14,padding:"18px 20px",
               marginBottom:24,textAlign:"center",textDecoration:"none"}}>
             <div style={{color:C.dark,fontWeight:700,fontSize:16,fontFamily:FONT,marginBottom:4}}>רוצים להעמיק את המבט?</div>
-            <div style={{color:C.dark,fontSize:13,fontFamily:FONT}}>גלו את סדנאות מנהיגות תחת העדשה למנהלים</div>
+            <div style={{color:C.dark,fontSize:13,fontFamily:FONT}}>גלו את סדנאות מנהיגות תחת העדשה למפקדים</div>
           </a>
           <Footer/>
         </div>
