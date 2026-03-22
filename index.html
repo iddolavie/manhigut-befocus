@@ -81,7 +81,7 @@ const C = { bg:"#58595B", bgCard:"#6F7173", bgInput:"#7A7C7E", yellow:"#FFE100",
 const FONT = "'Alef', Arial, sans-serif";
 
 const STEPS_CONFIG = [
-  { num:1, icon:"☀️", title:"חשיפה",      subtitle:"כיול הנוכחות והגדרת האתגר",      tagLabel:"מסגור האתגר",  tagBg:C.yellow,   tagColor:C.dark,  instruction:"בחר תמונה שמייצגת את האתגר הניהולי שלך – זו שמאירה או מאפילה על הפריים הפיקודי שלך כרגע.",   nextLabel:"המשך לשלב 2" },
+  { num:1, icon:"☀️", title:"חשיפה",      subtitle:"כיול הנוכחות והגדרת האתגר",      tagLabel:"מסגור האתגר",  tagBg:C.yellow,   tagColor:C.dark,  instruction:"בחר תמונה שמייצגת את האתגר הפיקודי שלך – זו שמאירה או מאפילה על הפריים הפיקודי שלך כרגע.",   nextLabel:"המשך לשלב 2" },
   { num:2, icon:"🎯", title:"עומק שדה",   subtitle:"דיוק הפוקוס וסדרי העדיפויות",    tagLabel:"מיקוד רלוונטי",tagBg:C.blue,     tagColor:C.dark,  instruction:"בחר דימוי שמסמל את הפוקוס הניהולי שהיית רוצה לשים עליו הדגש.",                               nextLabel:"המשך לשלב 3" },
   { num:3, icon:"🌑", title:"צללים",      subtitle:"זיהוי הדינמיקות הסמויות בצוות", tagLabel:"חשיפת חסמים", tagBg:"#6F7173",  tagColor:C.white, instruction:"כל צוות מחזיק 'צללים' – דינמיקות, חששות ומתחים שלא מדברים עליהם בגלוי. בחר תמונה שמייצגת חסמים.", nextLabel:"המשך לשלב 4" },
   { num:4, icon:"📐", title:"קומפוזיציה", subtitle:"מעבר לפעולה קונקרטית",           tagLabel:"מעבר לפעולה", tagBg:"#A2A2A1",  tagColor:C.dark,  instruction:"בחר תמונה שמייצגת את הכיוון שאליו אתה רוצה ללכת – כדי שנוכל לבנות יחד תוכנית פעולה קונקרטית.", nextLabel:"סיים וקבל סיכום" },
@@ -89,7 +89,7 @@ const STEPS_CONFIG = [
 
 const STEP_QUESTIONS = {
   1:[
-    {key:"challenge",label:"מה האתגר הניהולי שהתמונה הזאת מייצגת עבורך?",placeholder:"האתגר שהתמונה מייצגת...",type:"textarea"},
+    {key:"challenge",label:"מה האתגר הפיקודי שהתמונה הזאת מייצגת עבורך?",placeholder:"האתגר שהתמונה מייצגת...",type:"textarea"},
     {key:"current",  label:"מה ההתמודדות הניהולית המרכזית שאתה מתמודד איתה כעת?",placeholder:"אני מתמודד עם...",type:"textarea"},
     {key:"skills",   label:"אילו כישורים אתה מגיס כדי להתמודד עם המצב?",subtitle:"בחר עד 3",type:"tags",
      options:["אסטרטגיה","תקשורת","יצירתיות","ניהול זמן","הקשבה","קבלת החלטות","בניית אמון","חדשנות","עבודת צוות","חשיבה מערכתית"],max:3},
