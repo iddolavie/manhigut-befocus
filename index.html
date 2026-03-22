@@ -81,7 +81,7 @@ const C = { bg:"#58595B", bgCard:"#6F7173", bgInput:"#7A7C7E", yellow:"#FFE100",
 const FONT = "'Alef', Arial, sans-serif";
 
 const STEPS_CONFIG = [
-  { num:1, icon:"☀️", title:"חשיפה",      subtitle:"כיול הנוכחות והגדרת האתגר",      tagLabel:"מסגור האתגר",  tagBg:C.yellow,   tagColor:C.dark,  instruction:"בחר תמונה שמייצגת את האתגר הניהולי שלך – זו שמאירה או מאפילה על הפריים הניהולי שלך כרגע.",   nextLabel:"המשך לשלב 2" },
+  { num:1, icon:"☀️", title:"חשיפה",      subtitle:"כיול הנוכחות והגדרת האתגר",      tagLabel:"מסגור האתגר",  tagBg:C.yellow,   tagColor:C.dark,  instruction:"בחר תמונה שמייצגת את האתגר הניהולי שלך – זו שמאירה או מאפילה על הפריים הפיקודי שלך כרגע.",   nextLabel:"המשך לשלב 2" },
   { num:2, icon:"🎯", title:"עומק שדה",   subtitle:"דיוק הפוקוס וסדרי העדיפויות",    tagLabel:"מיקוד רלוונטי",tagBg:C.blue,     tagColor:C.dark,  instruction:"בחר דימוי שמסמל את הפוקוס הניהולי שהיית רוצה לשים עליו הדגש.",                               nextLabel:"המשך לשלב 3" },
   { num:3, icon:"🌑", title:"צללים",      subtitle:"זיהוי הדינמיקות הסמויות בצוות", tagLabel:"חשיפת חסמים", tagBg:"#6F7173",  tagColor:C.white, instruction:"כל צוות מחזיק 'צללים' – דינמיקות, חששות ומתחים שלא מדברים עליהם בגלוי. בחר תמונה שמייצגת חסמים.", nextLabel:"המשך לשלב 4" },
   { num:4, icon:"📐", title:"קומפוזיציה", subtitle:"מעבר לפעולה קונקרטית",           tagLabel:"מעבר לפעולה", tagBg:"#A2A2A1",  tagColor:C.dark,  instruction:"בחר תמונה שמייצגת את הכיוון שאליו אתה רוצה ללכת – כדי שנוכל לבנות יחד תוכנית פעולה קונקרטית.", nextLabel:"סיים וקבל סיכום" },
@@ -486,7 +486,7 @@ function Footer(){
 // =====================
 function HomePage({onStart}){
   const cards=[
-    {num:1,icon:"☀️",title:"חשיפה",     tag:"מסגור האתגר",  tagBg:C.yellow, tagColor:C.dark, desc:"נזהה את ההתמודדות המרכזית שמאירה או מאפילה על הפריים הניהולי שלכם כרגע."},
+    {num:1,icon:"☀️",title:"חשיפה",     tag:"מסגור האתגר",  tagBg:C.yellow, tagColor:C.dark, desc:"נזהה את ההתמודדות המרכזית שמאירה או מאפילה על הפריים הפיקודי שלכם כרגע."},
     {num:2,icon:"🎯",title:"עומק שדה",  tag:"מיקוד רלוונטי",tagBg:C.blue,   tagColor:C.dark, desc:"נחליט מה חייב להיות בחדות שיא (הפוקוס שלכם) ומה אתם בוחרים להשאיר מטושטש."},
     {num:3,icon:"🌑",title:"צללים",     tag:"חשיפת חסמים", tagBg:"#6F7173",tagColor:C.white,desc:"נציף את החסמים והדינמיקות שמתחת לפני השטח ומעכבים אתכם."},
     {num:4,icon:"📐",title:"קומפוזיציה",tag:"מעבר לפעולה", tagBg:"#A2A2A1",tagColor:C.dark, desc:"נארגן את כל האלמנטים מחדש לכדי תוכנית פעולה קונקרטית."},
