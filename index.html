@@ -401,15 +401,22 @@ function PhotoGallery({selected,onSelect}){
       {PHOTOS.map((src,i)=>{
         const sel=selected===i,hv=hov===i;
         return(
-          <div key={i} onClick={()=>onSelect(i)}
-            onMouseEnter={()=>setHov(i)} onMouseLeave={()=>setHov(null)}
-            style={{borderRadius:10,overflow:"hidden",cursor:"pointer",aspectRatio:"1/1",
+          <div key={i}
+            onClick={()=>onSelect(i)}
+            onMouseEnter={()=>setHov(i)}
+            onMouseLeave={()=>setHov(null)}
+            onTouchStart={()=>setHov(i)}
+            onTouchEnd={()=>setTimeout(()=>setHov(null),350)}
+            style={{position:"relative",cursor:"pointer",aspectRatio:"1/1",
               border:sel?`3px solid ${C.yellow}`:"3px solid transparent",
-              boxShadow:hv?"0 6px 20px rgba(0,0,0,0.5)":sel?`0 0 0 2px ${C.yellow}66`:"none",
+              borderRadius:10,
+              boxShadow:hv?"0 6px 22px rgba(0,0,0,0.55)":sel?`0 0 0 2px ${C.yellow}66`:"none",
               transform:hv?"scale(1.18)":sel?"scale(1.06)":"scale(1)",
               transition:"transform 0.22s ease, box-shadow 0.22s ease",
-              zIndex:hv?10:1,position:"relative"}}>
-            <img src={src} style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} alt=""/>
+              zIndex:hv?10:1}}>
+            <img src={src}
+              style={{width:"100%",height:"100%",objectFit:"cover",display:"block",
+                borderRadius:7,pointerEvents:"none"}} alt=""/>
           </div>
         );
       })}
